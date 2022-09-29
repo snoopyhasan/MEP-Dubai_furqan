@@ -3,18 +3,18 @@ import { jsx, Container, Flex, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
 import Logo from 'components/logo';
-import { DrawerProvider } from 'contexts/drawer/drawer.provider';
+import LogoDark from 'assets/logo-dark.svg';
+import LogoWhite from 'assets/logo.svg';
+import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
 
-import Divider from 'assets/divider.svg';
-
 export default function Header({ className }) {
   return (
-    <DrawerProvider>
+    <DrawerProvider >
       <header sx={styles.header} className={className} id="header">
-        <Container sx={styles.container}>
-          
+        <Container sx={styles.container} >
+          <Logo src={className === 'sticky' ? LogoDark : LogoWhite} />
 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
@@ -32,6 +32,15 @@ export default function Header({ className }) {
             ))}
           </Flex>
 
+          <Button
+            className="donate__btn"
+            variant="secondary"
+            aria-label="Get Started"
+            backgroundColor='#596AFF' color='white'
+          >
+            Join Us
+          </Button>
+
           <MobileDrawer />
         </Container>
       </header>
@@ -44,7 +53,6 @@ const positionAnim = keyframes`
     position: fixed;
     opacity: 1;
   }
-
   to {
     position: absolute;
     opacity: 1;
@@ -54,43 +62,37 @@ const positionAnim = keyframes`
 
 const styles = {
   header: {
-    py: [4, null, 5],
+    color: 'black',
+    fontWeight: 'normal',
+    py: 4,
     width: '100%',
     position: 'absolute',
     top: 0,
     left: 0,
     backgroundColor: 'transparent',
-    transition: 'all 0.4s ease',
+    transition: 'all 0.5s ease',
     animation: `${positionAnim} 0.4s ease`,
     '.donate__btn': {
       flexShrink: 0,
       mr: [15, 20, null, null, 0],
       ml: ['auto', null, null, null, 0],
-      backgroundImage: ['none', null, null, null, `url(${Divider})`],
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center bottom',
-      backgroundSize: 'contain',
-      backgroundColor: ['#FEEDEF', null, null, null, 'transparent'],
-      color: 'primary',
-      fontWeight: 'bold',
-      py: ['12px', null, null, null, 2],
-      px: [3, null, null, null, 0],
-      ':hover': {
-        backgroundColor: ['primary', null, null, null, 'transparent'],
-        color: ['white', null, null, null, 'primary'],
-      },
     },
     '&.sticky': {
       position: 'fixed',
       backgroundColor: 'background',
-      color: 'heading',
+      color: '#000000',
       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
-      py: '20px',
+      py: 3,
       'nev > a': {
-        color: 'heading',
+        color: 'text',
       },
       '.donate__btn': {
-        border: '0px solid',
+        
+        '&:hover': {
+          boxShadow: 'rgba(31, 62, 118, 0.57) 0px 9px 20px -5px',
+          backgroundColor: 'white',
+          color: 'white',
+        },
       },
     },
   },
@@ -100,22 +102,19 @@ const styles = {
     justifyContent: 'space-between',
   },
   nav: {
-    ml: 'auto',
-    mr: 6,
+    mx: 'auto',
     display: 'none',
     '@media screen and (min-width: 1024px)': {
       display: 'block',
     },
     a: {
       fontSize: '16px',
-      fontWeight: 'heading',
-      px: 20,
+      fontWeight: '400',
+      px: 25,
       cursor: 'pointer',
       lineHeight: '1.2',
-      transition: 'all 0.15s',
-      color: 'heading',
       '&.active': {
-        color: 'primary',
+        color: 'secondary',
       },
     },
   },

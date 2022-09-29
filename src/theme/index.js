@@ -1,15 +1,15 @@
 export default {
-  // example colors with dark mode
+   
   colors: {
     text: '#343D48', // body color and primary color
     text_secondary: '#02073E', // secondary body color
-    heading: '#0F2137', // primary heading color
-    heading_secondary: '#02073E', // heading color
+    heading: '#244886', // primary heading color
+    heading_secondary: '#0F2137', // heading color
     background: '#FFFFFF', // body background color
-    background_secondary: '#F9FAFC', // secondary background color
+    background_secondary: '#F9FBFD', // secondary background color
     border_color: '#E5ECF4', // border color
-    primary: '#F94962', // primary button and link color
-    secondary: '#3183FF', // secondary color - can be used for hover states
+    primary: '#1F3E76', // primary button and link color
+    secondary: '#25CB9E', // secondary color - can be used for hover states
     muted: '#7B8188', // muted color
     accent: '#609', // a contrast color for emphasizing UI
     yellow: '#F6C416',
@@ -36,18 +36,17 @@ export default {
   ],
   fonts: {
     body: "'DM Sans', sans-serif",
-    heading: "'Bree Serif', serif",
-    special: "'Roboto Slab', serif",
+    heading: "'DM Sans', sans-serif",
   },
-  fontSizes: [12, 15, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48, 52, 56, 62],
+  fontSizes: [12, 15, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48, 52, 64],
   fontWeights: {
     body: 'normal',
     heading: 500,
     bold: 700,
   },
   lineHeights: {
-    body: 1.9,
-    heading: 1.6,
+    body: 1.8,
+    heading: 1.5,
   },
   letterSpacings: {
     body: 'normal',
@@ -58,7 +57,16 @@ export default {
   // variants can use custom, user-defined names
   layout: {
     container: {
-      maxWidth: ['100%', null, null, null, '1020px', '1220px', null, '1350px'],
+      maxWidth: [
+        '100%',
+        null,
+        null,
+        '780px',
+        '1020px',
+        '1200px',
+        null,
+        '1310px',
+      ],
       px: [4, 6],
     },
     header: {
@@ -76,80 +84,88 @@ export default {
     main: {},
   },
   section: {
+    keyFeature: {
+      py: [8, null, 9, null, null, 10],
+    },
     feature: {
       py: [8, null, 9, null, null, 10],
     },
-    profit: {
+    partner: {
+      pt: [2, null, null, 5],
+      pb: [8, null, 9, null, null, 10],
+    },
+    testimonial: {
       py: [8, null, 9, null, null, 10],
-      backgroundColor: 'background_secondary',
+      overflow: 'hidden',
+    },
+    securePayment: {
+      overflow: 'hidden',
       position: 'relative',
+      pt: 9,
     },
-    knowledge: {
-      pt: [8, null, 9, null, null, 10],
-      pb: [0, null, null, 2, 5],
-    },
-    feedback: {
+    faq: {
       py: [8, null, 9, null, null, 10],
-    },
-    workflow: {
-      py: [8, null, 9, null, null, 10],
-      backgroundColor: 'background_secondary',
-    },
-    support: {
-      pt: [8, null, 9, null, null, 10],
-      pb: [8, null, 9, null, null, 9],
     },
   },
   sectionHeader: {
-    width: ['100%', null, null, '650px'],
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    mt: [-2, null, null, null, -3],
-    mx: 'auto',
-    marginBottom: [7, null, '60px', null, '65px', null, '70px', 8],
+    mt: -1,
+    marginBottom: ['50px', null, '60px', null, '65px', '75px'],
     title: {
-      fontSize: [6, 7, 8, null, 9],
-      color: 'heading',
-      lineHeight: [1.4, 1.45],
+      fontSize: ['24px', null, '28px', null, null, '32px', null, '36px'],
+      color: 'heading_secondary',
+      lineHeight: [1.3, null, null, 1.2],
       textAlign: 'center',
-      fontFamily: 'heading',
-      fontWeight: 'body',
-      letterSpacing: 'heading',
-      mb: [3, null, null, null, 4, 5],
+      fontWeight: '700',
+      letterSpacing: '-.5px',
     },
-    description: {
-      fontSize: [1, 2],
-      color: 'text',
+
+    subTitle: {
+      fontSize: [0, null, '14px'],
+      color: 'heading',
       textAlign: 'center',
-      fontWeight: 'body',
-      lineHeight: [1.9, 2, null, 2.2],
-      px: [0, null, 6],
+      letterSpacing: ['1.5px', null, '2px'],
+      textTransform: 'uppercase',
+      fontWeight: '700',
+      mb: '8px',
+      lineHeight: 1.5,
     },
   },
   text: {
     heading: {
-      fontFamily: 'body',
-      lineHeight: [1.5, 'heading'],
+      fontFamily: 'heading',
+      lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 3,
+      fontSize: 4,
+      letterSpacing: 'heading',
       color: 'heading',
     },
     heroPrimary: {
-      color: 'heading_secondary',
-      fontSize: ['34px', 10, 11, 12, 11, 12, 13, 14],
-      lineHeight: [1.3, 1.25],
-      fontWeight: 'body',
-      mb: [4, 5],
-      px: [0, 3, 6, 4, 0],
+      color: 'white',
+      fontSize: [
+        '40px',
+        '52px',
+        '60px',
+        '48px',
+        '52px',
+        '60px',
+        '66px',
+        '78px',
+      ],
+      lineHeight: 1.2,
+      fontWeight: 700,
+      mb: [5, null, null, null, '30px'],
     },
     heroSecondary: {
-      color: 'heading_secondary',
-      fontSize: [2, '17px', null, 3, null, 4],
-      lineHeight: [1.9, null, null, null, 2.1],
+      color: 'white',
+      fontSize: [2, 3, 4, '17px', null, 3, '19px', 4],
+      lineHeight: [2, null, null, null, 2.2],
       fontWeight: 'body',
-      pr: [0, null, null, null, 4, 6],
-      mb: [6, null, '35px'],
+      pr: [0, null, null, null, null, '100px', null, '125px'],
+      mb: ['35px', null, null, null, '40px', null, null, 7],
     },
     title: {
       // extends the text.heading styles
@@ -180,7 +196,6 @@ export default {
   links: {
     default: {
       cursor: 'pointer',
-      textDecoration: 'none',
     },
     bold: {
       fontWeight: 'bold',
@@ -214,10 +229,10 @@ export default {
     }, // default variant for MenuButton
     // you can reference other values defined in the theme
     defaultBtn: {
-      borderRadius: '6px',
-      fontSize: [1, 2],
-      letterSpacings: '-0.15px',
-      padding: ['10px 15px', '13px 30px'],
+      borderRadius: '45px',
+      fontSize: ['14px', 1, null, null, 2],
+      letterSpacings: ['-0.5px', null, null, null, '-0.15px'],
+      padding: ['11px 20px 10px', null, null, null, '13px 30px'],
       fontFamily: 'body',
       cursor: 'pointer',
       lineHeight: 1.2,
@@ -238,49 +253,19 @@ export default {
     whiteButton: {
       variant: 'buttons.defaultBtn',
       color: 'heading_secondary',
-      padding: ['15px 20px', null, '17px 20px 16px', null, '20px 30px'],
       bg: 'white',
-      fontWeight: 'bold',
-      letterSpacing: '1px',
-      transition: 'all 0.35s',
-      fontSize: [0, '13px', null, null, 1],
       '&:hover': {
-        backgroundColor: 'primary',
-        color: 'white',
-      },
-    },
-    subscribeButton: {
-      variant: 'buttons.defaultBtn',
-      backgroundColor: 'primary',
-      flexShrink: 0,
-      ml: [2, 3],
-      padding: ['10px 20px', '12px 30px'],
-      fontSize: [1, 2, 3],
-      fontWeight: 'bold',
-      '&:hover': {
-        boxShadow: 'rgba(249, 84, 84, 0.3) 0px 9px 20px -5px',
+        boxShadow: 'rgba(0, 0, 0, 0.5) 0px 12px 24px -10px',
       },
     },
     secondary: {
       variant: 'buttons.defaultBtn',
-      color: 'secondary',
-      fontSize: [1, null, null, null, 2],
+      border: '1.5px solid white',
       backgroundColor: 'transparent',
-      fontWeight: 'heading',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: [0, 0],
-      svg: {
-        fontSize: '15px',
-        mt: '1px',
-        transition: 'all 0.25s',
-      },
+      color: 'white',
       '&:hover': {
-        color: 'primary',
-        svg: {
-          ml: 1,
-        },
+        bg: 'white',
+        color: 'heading_secondary',
       },
     },
     textButton: {
@@ -359,6 +344,17 @@ export default {
       lineHeight: 'body',
       fontWeight: 'body',
       fontSmoothing: 'antialiased',
+      '.modal-video-close-btn': {
+        cursor: 'pointer',
+        top: '-25px',
+        right: '-25px',
+        width: ' 25px',
+        height: '25px',
+      },
+      '.modal-video-movie-wrap': {
+        margin: 6,
+        width: 'auto',
+      },
     },
     // Divider styles
     hr: {

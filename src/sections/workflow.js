@@ -3,34 +3,45 @@ import { jsx } from 'theme-ui';
 import { Container, Grid, Box, Heading, Text } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 
+import PatternBG from 'assets/patternBG.png';
+import ArrowOdd from 'assets/arrowOdd.png';
+import ArrowEven from 'assets/arrowEven.png';
+
 const data = [
   {
     id: 1,
-    title: 'Connect with support',
+    title: 'Set disbursement Instructions',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'Get your blood tests delivered at home collect a sample from the your blood tests.',
   },
   {
     id: 2,
-    title: 'Explain you business idea',
+    title: 'Assembly retrieves funds from your account',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'Get your blood tests delivered at home collect a sample from the your blood tests.',
   },
   {
     id: 3,
-    title: 'Be partner & earn money',
+    title: 'Assembly initiates disbursement',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+  },
+  {
+    id: 4,
+    title: 'Customer receives funds payment',
+    text:
+      'Get your blood tests delivered at home collect a sample from the your blood tests.',
   },
 ];
 
 export default function WorkFlow() {
   return (
-    <section sx={{ variant: 'section.workflow' }}>
+    <section sx={styles.workflow}>
       <Container>
-        <SectionHeader
-          title="Let’s meet how its work"
-          description="Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click into your preferred format."
+        <SectionHeader  sx={styles.sectionheader}
+          slogan="Whats the function"
+          title="Let’s see how it works"
+          isWhite={true}
         />
 
         <Grid sx={styles.grid}>
@@ -38,8 +49,8 @@ export default function WorkFlow() {
             <Box sx={styles.card} key={item.id}>
               <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
               <Box sx={styles.wrapper}>
-                <Heading sx={{ variant: 'text.heading' }}>{item.title}</Heading>
-                <Text sx={styles.wrapper.description}>{item.text}</Text>
+                <Heading sx={styles.wrapper.title}>{item.title}</Heading>
+                <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
               </Box>
             </Box>
           ))}
@@ -50,58 +61,120 @@ export default function WorkFlow() {
 }
 
 const styles = {
+  workflow: {
+    backgroundColor: '#e9efff',
+    backgroundImage: `url(${PatternBG})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    position: 'relative',
+    py: [8, null, 9, null, null, 10],
+    '&::before': {
+      position: 'absolute',
+      content: '""',
+      top: 0,
+      right: 0,
+      background:
+        'linear-gradient(-45deg, rgba(42,72,125, 0.3) 25%, transparent 25%, transparent 50%, rgba(42,72,125, 0.3) 50%, rgba(42,72,125, 0.3) 75%, transparent 75%, transparent)',
+      width: '100%',
+      backgroundSize: '350px 350px',
+      height: '100%',
+      opacity: 0.3,
+      zIndex: 0,
+    },
+  },
+  sectionheader:{
+       color: 'black',
+  },
   grid: {
-    pt: [0, null, null, null, null, null, null, null, 3],
-    pb: [0, null, null, null, null, null, null, null, 5],
     mb: -1,
+    pt: 0,
     gridGap: [
-      '40px',
-      '45px',
-      '45px 30px',
+      '35px 0',
       null,
-      '60px 30px',
-      '50px 40px',
+      '45px 50px',
       null,
-      '75px',
+      '50px 25px',
+      null,
+      null,
+      '50px 65px',
     ],
     gridTemplateColumns: [
       'repeat(1,1fr)',
       null,
       'repeat(2,1fr)',
       null,
-      'repeat(3,1fr)',
+      'repeat(4,1fr)',
     ],
   },
   card: {
     display: 'flex',
-    flexDirection: ['column', null, null, 'row'],
+    flexDirection: 'column',
+    position: 'relative',
     textAlign: ['center', null, 'left'],
-    px: [0, 5, 0],
+    width: ['100%', '80%', '100%'],
+    mx: 'auto',
+    '&::before': {
+      position: 'absolute',
+      content: '""',
+      top: 0,
+      left: [0, null, null, null, null, 75, null, 100],
+      backgroundRepeat: `no-repeat`,
+      backgroundPosition: 'center center',
+      width: 215,
+      height: 60,
+      opacity: 0.3,
+      '@media screen and (max-width:1220px)': {
+        display: 'none',
+      },
+    },
+    '&:nth-of-type(2n-1)::before': {
+      backgroundImage: `url(${ArrowOdd})`,
+    },
+    '&:nth-of-type(2n)::before': {
+      backgroundImage: `url(${ArrowEven})`,
+      top: 17,
+    },
+    '&:last-child::before': {
+      display: 'none',
+    },
   },
 
   iconBox: {
+    width: ['50px', null, '60px', null, null, '70px'],
+    height: ['50px', null, '60px', null, null, '70px'],
     flexShrink: 0,
-    mb: [4, null, null, 0],
-    fontSize: [8, 9, null, null, 10, null, null, 11],
-    fontWeight: 300,
-    fontFamily: 'special',
-    color: 'heading',
-    lineHeight: 1,
-    letterSpacing: 'heading',
-    mr: ['auto', null, 0, 4, null, null, null, 5],
-    ml: ['auto', null, 0],
-    mt: [0, null, null, -1],
+    borderRadius: [15, null, 23, null, null, 30],
+    backgroundColor: 'black',
+    display: 'flex',
+    alignItems: 'center',
+    mb: [5, null, null, null, null, 6],
+    mx: ['auto', null, 0],
+    fontSize: [6, null, 7, null, null, '30px'],
+    fontWeight: 700,
+    justifyContent: 'center',
+    color: 'white',
   },
   wrapper: {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
     mt: '-5px',
-    description: {
-      fontSize: [1, 2],
-      fontWeight: 'body',
-      lineHeight: 1.9,
-      pt: 2,
+    title: {
+      fontSize: [3, null, 4, null, null, 5],
+      color: 'black',
+      lineHeight: [1.4, null, null, null, null, 1.55],
+      pr: [0, null, null, null, null, 2],
+      mb: [2, 3],
+    },
+
+    subTitle: {
+      fontSize: 1,
+      fontWeight: 400,
+      lineHeight: [1.85, null, null, 1.9, 2],
+      color: 'black',
+      opacity: 0.65,
+      pr: [0, null, null, null, null, 5],
     },
   },
 };

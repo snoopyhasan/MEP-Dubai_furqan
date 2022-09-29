@@ -3,44 +3,72 @@ import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import FeatureCard from 'components/feature-card.js';
-import Marketplace from 'assets/feature/marketplace.svg';
-import Gift from 'assets/feature/gift.svg';
-import Award from 'assets/feature/award.svg';
+import Smart from 'assets/feature/smart.svg';
+import Winner from 'assets/feature/winner.svg';
+import Cloud from 'assets/feature/cloud.svg';
+import Setting from 'assets/feature/setting.svg';
+import Design from 'assets/feature/design.svg';
+import Chat from 'assets/feature/chat.svg';
 
 const data = [
   {
     id: 1,
-    imgSrc: Marketplace,
-    altText: 'Marketplace',
-    title: 'Trusted marketplace',
+    imgSrc: Smart,
+    altText: 'Smart',
+    title: 'Smart Features',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'Get your blood tests delivered at let home collect sample from the victory of the managements.',
   },
   {
     id: 2,
-    imgSrc: Gift,
-    altText: 'Gift',
-    title: 'Customer Gift vouchers',
+    imgSrc: Winner,
+    altText: 'Performance',
+    title: 'Fast Performance',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'Get your blood tests delivered at let home collect sample from the victory of the managements.',
   },
   {
     id: 3,
-    imgSrc: Award,
-    altText: 'Awards',
-    title: 'Multiple Awards wins',
+    imgSrc: Cloud,
+    altText: 'Content',
+    title: 'Unlimited Content',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'Get your blood tests delivered at let home collect sample from the victory of the managements.',
+  },
+  {
+    id: 4,
+    imgSrc: Setting,
+    altText: 'Customization',
+    title: 'Unlimited Customization',
+    text:
+      'Get your blood tests delivered at let home collect sample from the victory of the managements.',
+  },
+  {
+    id: 5,
+    imgSrc: Design,
+    altText: 'Productivity',
+    title: 'Boost Productivity',
+    text:
+      'Get your blood tests delivered at let home collect sample from the victory of the managements.',
+  },
+  {
+    id: 6,
+    imgSrc: Chat,
+    altText: 'Support',
+    title: 'Customer Support',
+    text:
+      'Get your blood tests delivered at let home collect sample from the victory of the managements.',
   },
 ];
 
 export default function Feature() {
   return (
-    <section sx={{ variant: 'section.feature' }} id="feature">
+    <section sx={{ variant: 'section.feature'}}>
+       
       <Container>
         <SectionHeader
-          title="Go Beyond unlimited features"
-          description="Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click into your preferred format."
+          title="Why  Choose Us"
+          slogan="Quality features"
         />
 
         <Grid sx={styles.grid}>
@@ -61,18 +89,20 @@ export default function Feature() {
 
 const styles = {
   grid: {
-    pt: [0, null, null, null, null, null, null, null, 4],
-    pb: [0, null, null, null, null, null, null, null, 6],
+    pt: [0, null, null, null, null, null, null, 3],
     gridGap: [
-      '40px',
-      '45px',
+      '37px 0',
+      null,
       '45px 30px',
       null,
-      '60px 30px',
-      '50px 40px',
+      '50px 30px',
       null,
-      '75px',
+      null,
+      '90px 70px',
     ],
+     
+    width: ['100%', '80%', '100%'],
+    mx: 'auto',
     gridTemplateColumns: [
       'repeat(1,1fr)',
       null,

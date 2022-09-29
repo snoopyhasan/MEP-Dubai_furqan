@@ -1,15 +1,17 @@
 /** @jsx jsx */
-import { jsx, Heading, Box, Text, Flex, Container } from 'theme-ui';
+import { jsx, Container, Flex, Box, Heading, Text, Image, Button } from 'theme-ui';
 import { Link } from 'components/link';
 import Logo from 'components/logo';
 import menuItems from './footer.data';
+import Dubaicon from 'assets/dubai.png'
+import IndiaGate from 'assets/india-gate.png'
+import Uk from 'assets/uk.png'
  
-import CallToAction from 'sections/call-to-action';
 export default function Footer() {
   return (
+    <> 
     <footer sx={styles.footer}>
-      <CallToAction />
-      <Container sx={styles.footer.container}>
+       <Container sx={styles.footer.container}>
         <Box sx={styles.footer.footerTopArea}>
           <Box sx={styles.copyrightArea}>
             <Box className="footer__logo">
@@ -47,12 +49,14 @@ export default function Footer() {
         </Box>
       </Container>
     </footer>
+    </>
   );
 }
 
 const styles = {
   footer: {
-    backgroundColor: 'background_secondary',
+    positio:'relative',
+    backgroundColor: '#18263B',
     container: {
       width: '100%',
       alignItems: 'stretch',
@@ -88,7 +92,7 @@ const styles = {
 
     heading: {
       fontSize: [2, 3],
-      color: 'heading',
+      color: '#66ABFF',
       fontWeight: 'heading',
       litterSpacing: 'heading',
       mb: [4, null, null, null, 5, 6],
@@ -97,7 +101,7 @@ const styles = {
 
     link: {
       fontSize: ['14px', 1],
-      color: 'text_secondary',
+      color: '#fcfcfc',
       fontWeight: 'body',
       mb: 2,
       cursor: 'pointer',
@@ -118,10 +122,10 @@ const styles = {
       '&.twitter > svg': {
         color: '#55ACEE',
       },
-      '&.github > svg': {
+      '&.instagram > svg': {
         color: '#161614',
       },
-      '&.dribbble > svg': {
+      '&.pintrest > svg': {
         color: '#E74D89',
       },
       ':hover': {
@@ -152,7 +156,7 @@ const styles = {
       mt: [3, null, null, null, 4],
       a: {
         fontSize: ['14px', 1],
-        color: 'text_secondary',
+        color: '#66ABFF',
         fontWeight: 'body',
         mb: 1,
         cursor: 'pointer',
@@ -162,7 +166,7 @@ const styles = {
         ':before': {
           px: 2,
           content: '"|"',
-          color: 'text_secondary',
+          color: '#66ABFF',
         },
         ':first-of-type:before': {
           display: 'none',
@@ -174,7 +178,7 @@ const styles = {
     },
     copyright: {
       fontSize: ['14px', 1],
-      color: '#6D7886',
+      color: '#fcfcfc',
       pt: 1,
     },
   },

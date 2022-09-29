@@ -8,27 +8,27 @@ import { Link } from 'react-scroll';
 import {
   FaFacebookF,
   FaTwitter,
-  FaGithubAlt,
-  FaDribbble,
+  FaInstagram,
+  FaPinterest,
 } from 'react-icons/fa';
 import menuItems from './header.data';
 
 const social = [
   {
-    path: 'https://www.facebook.com',
+    path: '/',
     icon: <FaFacebookF />,
   },
   {
-    path: 'https://twitter.com/',
+    path: '/',
     icon: <FaTwitter />,
   },
   {
-    path: 'https://github.com/',
-    icon: <FaGithubAlt />,
+    path: '/',
+    icon: <FaInstagram />,
   },
   {
-    path: 'https://dribbble.com/',
-    icon: <FaDribbble />,
+    path: '/',
+    icon: <FaPinterest />,
   },
 ];
 
@@ -78,9 +78,7 @@ const MobileDrawer = () => {
             <Box sx={styles.social}>
               {social.map(({ path, icon }, i) => (
                 <Box as="span" key={i} sx={styles.social.icon}>
-                  <a href={path} target="_blank" rel="noreferrer">
-                    {icon}
-                  </a>
+                  <Link to={path}>{icon}</Link>
                 </Box>
               ))}
             </Box>
@@ -144,10 +142,10 @@ const styles = {
       borderBottom: '1px solid #e8e5e5',
       transition: 'all 0.25s',
       '&:hover': {
-        color: 'primary',
+        color: 'secondary',
       },
       '&.active': {
-        color: 'primary',
+        color: 'secondary',
       },
     },
   },
@@ -171,19 +169,15 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       color: 'text',
-      fontSize: 1,
-      mr: 4,
+      fontSize: 14,
+      mr: '15px',
       transition: 'all 0.25s',
       cursor: 'pointer',
-      svg: {
-        fill: 'text',
-        transition: 'all 0.25s',
-      },
       ':last-child': {
         mr: '0',
       },
-      '&:hover svg': {
-        fill: 'primary',
+      '&:hover': {
+        color: 'secondary',
       },
     },
   },

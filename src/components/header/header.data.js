@@ -5,14 +5,26 @@ export default [
   },
   {
     path: 'feature',
-    label: 'Features',
+    label: 'Services',
   },
   {
-    path: 'feedback',
-    label: 'Feedback',
+    path: 'testimonial',
+    label: 'Testimonial',
   },
   {
-    path: 'support',
-    label: 'Support',
+    path: 'project',
+    label: 'Project',
+  },
+  {
+    path: 'contact',
+    label: 'Contact',
+  },
+  {
+    path: 'blog',
+    label: 'Blog',
+  },
+  {
+    path: 'about',
+    label: 'About',
   },
 ];

@@ -5,6 +5,7 @@ import TextFeature from 'components/text-feature';
 import Image from 'components/image';
 
 import PaymentThumb from 'assets/paymentThumb.png';
+import PaymentPattern from 'assets/payment-pattern.png';
 
 const data = {
   subTitle: 'PAYMENT SECURITY',
@@ -44,24 +45,20 @@ const styles = {
     right: 0,
     height: '100%',
     zIndex: -1,
-    bg: '#F4F6F9',
-    width: ['100%', null, null, null, 'calc(100% - 30px)'],
-    borderTopLeftRadius: ['120px', '150px', '200px'],
-    '@media screen and (min-width: 1300px)': {
-      width: 'calc(50% + 625px)',
-    },
-    '&::before': {
-      position: 'absolute',
-      content: '""',
-      top: 0,
-      right: 0,
-      background:
-        'linear-gradient(-45deg, #F4F9FD 25%, transparent 25%, transparent 50%, #F4F9FD 50%, #F4F9FD 75%, transparent 75%, transparent)',
-      backgroundSize: '350px 350px',
-      height: '100%',
-      width: '100%',
-      zIndex: 0,
-    },
+    width: [
+      '100%',
+      null,
+      null,
+      'calc(50% + 400px)',
+      'calc(50% + 480px)',
+      'calc(50% + 570px)',
+      null,
+      'calc(50% + 625px)',
+    ],
+    backgroundImage: `url(${PaymentPattern})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: 'top left',
+    backgroundSize: 'cover',
   },
   containerBox: {
     display: 'flex',
@@ -76,11 +73,12 @@ const styles = {
     pr: [6, null, 7, 0],
   },
   contentBox: {
-    width: ['100%', null, null, 400, 500, 570],
+    width: ['100%', 420, 480, 380, 500, 570],
+    mx: 'auto',
     flexShrink: 0,
     textAlign: ['center', null, null, 'left'],
-    pt: [0, null, null, '50px', '80px'],
-    pl: [0, null, null, 40, 55],
+    pt: [0, null, null, 4, '50px', null, 4, '80px'],
+    pl: [0, null, null, 40, '90px'],
     pb: [7, null, null, 9],
     pr: [0, null, null, null, null, 6],
   },

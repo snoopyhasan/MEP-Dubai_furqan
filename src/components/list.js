@@ -5,7 +5,6 @@ export default function List({ items = [], parentStyle, childStyle }) {
   return (
     <Box
       as="ul"
-      className="list__box"
       sx={{
         listStyleType: 'none',
         margin: 0,
@@ -13,9 +12,14 @@ export default function List({ items = [], parentStyle, childStyle }) {
         ...parentStyle,
       }}
     >
-      {items.map(({ icon, text }, i) => (
-        <Flex as="li" sx={{ ...childStyle }} key={i}>
-          <IconButton className="list__icon" aria-label="list icon">
+      {items.map(({ icon, text, isAvailable }, i) => (
+        <Flex
+          className={isAvailable ? 'open' : 'closed'}
+          as="li"
+          sx={{ ...childStyle }}
+          key={i}
+        >
+          <IconButton sx={styles.listIcon} aria-label="list icon">
             {icon}
           </IconButton>
           {text}
@@ -24,3 +28,16 @@ export default function List({ items = [], parentStyle, childStyle }) {
     </Box>
   );
 }
+const styles = {
+  listIcon: {
+    width: [25, '35px'],
+    height: 'auto',
+    color: 'secondary',
+    padding: 0,
+    fontSize: [2, 5],
+    marginLeft: '-1px',
+    flexShrink: 0,
+    justifyContent: 'flex-start',
+    marginTop: [1, '2px'],
+  },
+};
