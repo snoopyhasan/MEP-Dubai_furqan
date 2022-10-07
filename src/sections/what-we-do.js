@@ -6,7 +6,7 @@ import { FiArrowRight } from 'react-icons/fi'
 export default function WhatWeDo() {
   return (
     <section style={styles.coreFeature}>
-        <SectionHeader title="What We Do" />
+        <SectionHeader title="What We Do?" />
 
         <div class="container">
           <div style={styles.anotherContainer}>
@@ -19,10 +19,10 @@ export default function WhatWeDo() {
                     </div>
                   </div>
                   <div>
-                    <h3 style={styles.cardHeading}>Electrical Works</h3>
+                    <h3 style={styles.cardHeading}>Facility management</h3>
                   </div>
                   <div style={{width:'60%',textAlign:'center'}}>
-                    <p style={styles.cardPara}>afas oadh aaojdha ahuidgad ahsoudb afas oadh aaojdha ahuidgad ahs</p>
+                    <p style={styles.cardPara}>We are 24/7 available for you and your property. Our main aim is to make your environment a better place sustainably and cost-effectively. Having an in-house team for every facility management and MEP work stands us out from others in this unreliable market and no doubt makes us your dream facility management company in Dubai.</p>
                   </div>
                     <h2><FiArrowRight /></h2>
                 </div>
@@ -35,10 +35,10 @@ export default function WhatWeDo() {
                     </div>
                   </div>
                   <div>
-                    <h3 style={styles.cardHeading}>Electrical Works</h3>
+                    <h3 style={styles.cardHeading}>MEP Works</h3>
                   </div>
                   <div style={{width:'60%',textAlign:'center'}}>
-                    <p style={styles.cardPara}>afas oadh aaojdha ahuidgad ahsoudb afas oadh aaojdha ahuidgad ahs</p>
+                    <p style={styles.cardPara}>All over Dubai, the Urban Science team has led its impression. Whether it's a residential project, commercial, or xxxxxx, we have seen those projects in their worst and closed them with a strict deadline. In regards to experience, handing over on deadline, and correcting the blunders created by others we are the leading MEP company in Dubai. Your true partner for MEP companies in Dubai.</p>
                   </div>
                     <h2><FiArrowRight /></h2>
                 </div>
@@ -51,10 +51,10 @@ export default function WhatWeDo() {
                     </div>
                   </div>
                   <div>
-                    <h3 style={styles.cardHeading}>Electrical Works</h3>
+                    <h3 style={styles.cardHeading}>Air conditioning services (HVAC)</h3>
                   </div>
                   <div style={{width:'60%',textAlign:'center'}}>
-                    <p style={styles.cardPara}>afas oadh aaojdha ahuidgad ahsoudb afas oadh aaojdha ahuidgad ahs</p>
+                    <p style={styles.cardPara}>We are here to save you from sleepless nights. After 3-4 months of installation, if your Air-conditioner starts making noises or dripping water. You have gotten yourself into serious trouble. But do not worry, best MEP company in Dubai is here to help you. Just give us a call, we will be there to make your life easier and more comfortable.</p>
                   </div>
                     <h2><FiArrowRight /></h2>
                 </div>
@@ -67,10 +67,26 @@ export default function WhatWeDo() {
                     </div>
                   </div>
                   <div>
-                    <h3 style={styles.cardHeading}>Electrical Works</h3>
+                    <h3 style={styles.cardHeading}>Chilled water system</h3>
                   </div>
                   <div style={{width:'60%',textAlign:'center'}}>
-                    <p style={styles.cardPara}>afas oadh aaojdha ahuidgad ahsoudb afas oadh aaojdha ahuidgad ahs</p>
+                    <p style={styles.cardPara}>Do you need a chilled water storage system to be installed in your industry? Urban Science is here for you. Our chiller maintenance programs are site-specific, reducing the possibility of costly breakdowns in the cooling systems of our clients. We have an in-house MEP team for both rooftop systems and those that are installed behind the building’s wall. So keep calm and contact us for all your facility management and MEP works.</p>
+                  </div>
+                    <h2><FiArrowRight /></h2>
+                </div>
+              </li>
+              <li class="card" style={styles.card}>
+                <div style={styles.cardContent}>
+                  <div >
+                    <div style={styles.imageBG}>
+                      <img src={Plumber} style={{width:'100%',height:'100%',objectFit:'contain'}}/>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 style={styles.cardHeading}>Electrical works</h3>
+                  </div>
+                  <div style={{width:'60%',textAlign:'center'}}>
+                    <p style={styles.cardPara}>The reason why we are counted as one of the best facility management companies in Dubai is that we are a one-door solution for every MEP and facility management work. From your LV network to ELV services we have covered it all. We do not stop here, from your access control, CCTV, and security we have experts in every department. You are one call away from the best MEP company in Dubai..</p>
                   </div>
                     <h2><FiArrowRight /></h2>
                 </div>
